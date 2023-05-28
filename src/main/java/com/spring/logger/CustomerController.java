@@ -11,6 +11,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
 
@@ -24,7 +25,7 @@ public class CustomerController {
         dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
     }
 
-    @RequestMapping("/")
+    @RequestMapping(value = "/",method = {RequestMethod.GET,RequestMethod.HEAD,RequestMethod.OPTIONS})
     public String showForm(Model theModel){
 
         logger.trace("create a new student object");
@@ -35,7 +36,7 @@ public class CustomerController {
 
         return "customer-form";
     }
-    @RequestMapping("/processForm")
+    @RequestMapping(value = "/processForm",method = {RequestMethod.GET,RequestMethod.HEAD,RequestMethod.OPTIONS})
     public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer, BindingResult theBindingResult) {
 
         logger.info("Lastname: {}", theCustomer.getLastName());
