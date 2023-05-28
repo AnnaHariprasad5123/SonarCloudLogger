@@ -1,6 +1,5 @@
 package com.spring.logger.validation;
 
-import com.spring.logger.Customer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

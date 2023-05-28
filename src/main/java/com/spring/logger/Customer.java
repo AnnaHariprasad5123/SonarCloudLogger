@@ -5,7 +5,6 @@ import com.spring.logger.validation.CourseCode;
 
 import javax.validation.constraints.*;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
