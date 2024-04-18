@@ -1,3 +1,3 @@
 # SonarCloudLogger
 
-- This is SonarCloudLogger
+- This is SonarCloudLogger demo purpose
